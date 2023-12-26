@@ -1,0 +1,27 @@
+{
+  "name": "@dynamic-admin/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/runtime-core": "3.2.47",
+    "@vueuse/core": "^9.12.0",
+    "@vueuse/shared": "^9.12.0",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.5",
+    "lodash-es": "^4.17.21",
+    "pinia": "2.1.7",
+    "vue": "3.3.7",
+    "vue-router": "^4.2.5",
+    "vue-types": "^4.2.1",
+    "sortablejs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash-es": "^4.17.6",
+    "@dynamic-admin/types": "workspace:*"
+  }
+}

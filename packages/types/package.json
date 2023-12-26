@@ -1,0 +1,13 @@
+{
+  "name": "@dynamic-admin/types",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "module": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@dynamic-admin/enums": "workspace:*",
+    "pinia": "2.1.7",
+    "vue": "3.3.7",
+    "vue-router": "^4.2.5"
+  }
+}

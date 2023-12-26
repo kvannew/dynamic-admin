@@ -1,0 +1,53 @@
+{
+  "name": "dynamic-admin",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "K.N",
+    "email": "kvannews@gmail.com",
+    "url": "https://github.com/kvannew"
+  },
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "dev": "pnpm --filter scripts dev",
+    "build": "pnpm --filter scripts build",
+    "clean": "turbo run clean && rimraf \"{configs,packages,projects,scripts}/**/*{node_modules,dist,.turbo}\" && rimraf node_modules",
+    "format": "pnpm run lint:eslint & pnpm run lint:stylelint & pnpm run lint:prettier",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm run stub",
+    "lint:eslint": "eslint . --cache --max-warnings 0 --fix",
+    "lint:prettier": "prettier --write  \"{packages,projects,configs,scripts}/**/*.{js,json,ts,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint --fix ",
+    "stub": "pnpm --filter @config/** prepack",
+    "turbo:build": "turbo run build --parallel",
+    "turbo:dev": "turbo run dev --parallel",
+    "turbo:preview": "turbo run preview --parallel",
+    "changeset": "changeset",
+    "version": "pnpm run changeset version",
+    "test": "vitest"
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@config/lint": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^18.19.3",
+    "cross-env": "^7.0.3",
+    "esno": "^0.16.3",
+    "fs-extra": "^11.2.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "tsconfig": "workspace:*",
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3",
+    "unbuild": "^1.2.1"
+  },
+  "engines": {
+    "pnpm": ">=7.0.0",
+    "node": ">=16"
+  },
+  "packageManager": "^pnpm@7.11.0"
+}
