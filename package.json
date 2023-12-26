@@ -38,9 +38,6 @@
       "path": "git-cz"
     }
   },
-  "resolutions": {
-    "bin-wrapper": "npm:bin-wrapper-china"
-  },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@config/lint": "workspace:*",
