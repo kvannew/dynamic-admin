@@ -28,10 +28,6 @@
     "prepare": "husky install",
     "cmt": "git add . && git-cz"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "npm run lint:fix",
-    "src/**/*.{vue,js,ts,jsx,tsx}": "npm run prettier:fix"
-  },
   "config": {
     "commitizen": {
       "path": "git-cz"
