@@ -25,7 +25,18 @@
     "turbo:preview": "turbo run preview --parallel",
     "changeset": "changeset",
     "version": "pnpm run changeset version",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "husky install",
+    "cmt": "git add . && git-cz"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "npm run lint:fix",
+    "src/**/*.{vue,js,ts,jsx,tsx}": "npm run prettier:fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   },
   "resolutions": {
     "bin-wrapper": "npm:bin-wrapper-china"
@@ -36,8 +47,11 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^18.19.3",
     "cross-env": "^7.0.3",
+    "git-cz": "^4.9.0",
+    "commitizen": "^4.3.0",
     "esno": "^0.16.3",
     "fs-extra": "^11.2.0",
+    "husky": "^8.0.3",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.2",
     "tsconfig": "workspace:*",
